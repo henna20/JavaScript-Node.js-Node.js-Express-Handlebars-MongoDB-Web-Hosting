@@ -1,0 +1,33 @@
+<div class="container mt-5">
+
+    <h2 style="text-align: center;">Login</h2>
+
+    <form action="/login" method="POST">
+        {{#if loginErr}}
+        <p class="error" style="color: red;">{{loginErr}}</p>
+        {{/if}}
+        <div class="form-outline mb-4 mt-4">
+            <input type="email" class="form-control" name="Email" placeholder="Enter Email" />
+            <label>Email address</label>
+        </div>
+
+
+        <div class="form-outline mb-4">
+            <input type="password" class="form-control" name="Password" placeholder="Enter Password" />
+            <label>Password</label>
+        </div>
+
+        <div class="row mb-4">
+
+            <button type="submit" class="btn btn-primary btn-block mb-4 ">Sign in</button>
+
+
+        </div>
+
+
+        <div class="text-center">
+            <p>Not a member? <a href="/signup">Register</a></p>
+
+        </div>
+    </form>
+</div>
